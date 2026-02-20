@@ -9,17 +9,137 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <img class="site-logo" src="tmp/logo.png" alt="とっとりGEO-MAP 鳥取県">
-        <p class="site-eyebrow">Tottori Prefecture GIS Portal</p>
-        <h1 class="site-title">鳥取県GISマップ</h1>
-        <p class="site-lead">
-          鳥取県内19自治体の公開用GISマップへすばやくアクセスできる
-          ポータルサイトです。
-        </p>
+        <img class="site-logo" src="tmp/logo.png" alt="とっとりGEO-MAP 鳥取県自治体連携統合型GIS">
+        <nav class="header-nav">
+          <a class="header-btn" href="#">利用規約</a>
+          <a class="header-btn header-btn--accent" href="#">とっとりジオマップの使い方</a>
+        </nav>
       </div>
     </header>
 
+    <section class="hero">
+      <div class="hero-image">
+        <div class="container">
+          <p class="hero-catchcopy">（キャッチコピー）<br>○○○○・・・・</p>
+        </div>
+      </div>
+      <div class="hero-description container">
+        <p>【説明文】鳥取県では、県と市町村が共同・連携して取り組むための組織「鳥取県自治体ICT共同化推進協議会」を設立し・・・</p>
+      </div>
+    </section>
+
     <main class="main-content">
+      <section class="gis-sites container" aria-labelledby="gis-sites-title">
+        <h2 id="gis-sites-title" class="gis-sites__title">各自治体のGISサイト</h2>
+
+        <h3 class="gis-sites__subtitle">地図から選択</h3>
+        <div class="map-container">
+          <svg class="tottori-map" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="鳥取県地図">
+            <!-- 非アクティブ自治体（灰色・リンクなし） -->
+            <g class="map-area map-area--inactive">
+              <polygon points="82,96 108,88 114,110 118,140 96,144 76,118"/>
+              <text class="map-label" x="97" y="118" font-size="9">日吉津村</text>
+            </g>
+            <g class="map-area map-area--inactive">
+              <polygon points="44,76 82,96 76,118 96,144 118,140 180,155 180,210 88,210 52,165 38,108"/>
+              <text class="map-label" x="112" y="158" font-size="12">米子市</text>
+            </g>
+            <g class="map-area map-area--inactive">
+              <polygon points="298,40 362,36 362,130 298,148"/>
+              <text class="map-label" x="330" y="88" font-size="11">琴浦町</text>
+            </g>
+            <g class="map-area map-area--inactive">
+              <polygon points="362,36 438,32 438,126 362,130"/>
+              <text class="map-label" x="400" y="78" font-size="11">北栄町</text>
+            </g>
+            <g class="map-area map-area--inactive">
+              <polygon points="180,155 258,190 258,265 180,275 180,210"/>
+              <text class="map-label" x="218" y="228" font-size="11">伯耆町</text>
+            </g>
+            <g class="map-area map-area--inactive">
+              <polygon points="565,262 648,318 632,385 542,372 448,332"/>
+              <text class="map-label" x="567" y="340" font-size="11">智頭町</text>
+            </g>
+
+            <!-- アクティブ自治体（青色・リンク付き） -->
+            <a href="https://city-sakaiminato.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="48,62 68,36 112,28 116,58 108,88 82,96 44,76"/>
+              <text class="map-label" x="80" y="62" font-size="10">境港市</text>
+            </a>
+            <a href="https://town-daisen.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="116,58 112,28 150,36 238,32 298,40 298,148 258,190 180,155 118,140 114,110 108,88"/>
+              <text class="map-label" x="205" y="105" font-size="12">大山町</text>
+            </a>
+            <a href="https://town-nanbu.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="88,210 180,210 180,275 172,332 95,302"/>
+              <text class="map-label" x="136" y="260" font-size="11">南部町</text>
+            </a>
+            <a href="https://town-kofu.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="258,190 298,148 298,265 258,265"/>
+              <text class="map-label" x="278" y="222" font-size="10">江府町</text>
+            </a>
+            <a href="https://town-hino.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="180,275 258,265 298,265 292,372 250,382 196,392 172,332"/>
+              <text class="map-label" x="238" y="325" font-size="12">日野町</text>
+            </a>
+            <a href="https://town-nichinan.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="95,302 172,332 196,392 108,388"/>
+              <text class="map-label" x="140" y="355" font-size="11">日南町</text>
+            </a>
+            <a href="https://town-yurihama.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="438,32 515,30 515,155 448,182 438,126"/>
+              <text class="map-label" x="478" y="100" font-size="10">湯梨浜町</text>
+            </a>
+            <a href="https://city-kurayoshi.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="298,148 362,130 438,126 448,182 395,225 298,225"/>
+              <text class="map-label" x="370" y="178" font-size="12">倉吉市</text>
+            </a>
+            <a href="https://town-misasa.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="395,225 448,182 515,155 565,262 448,332 345,345 298,265 298,225"/>
+              <text class="map-label" x="420" y="265" font-size="12">三朝町</text>
+            </a>
+            <a href="https://city-tottori.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="515,30 632,26 705,24 705,165 632,215 565,262 515,155"/>
+              <text class="map-label" x="615" y="115" font-size="14">鳥取市</text>
+            </a>
+            <a href="https://town-iwami.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="705,24 765,30 792,72 790,185 762,255 735,168 705,165"/>
+              <text class="map-label" x="750" y="120" font-size="11">岩美町</text>
+            </a>
+            <a href="https://town-yazu.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="632,215 705,165 735,168 720,312 648,318 565,262"/>
+              <text class="map-label" x="660" y="250" font-size="12">八頭町</text>
+            </a>
+            <a href="https://town-wakasa.tottori.tottori-geomap.jp" class="map-area map-area--active">
+              <polygon points="648,318 720,312 762,255 758,368 632,385"/>
+              <text class="map-label" x="704" y="332" font-size="11">若桜町</text>
+            </a>
+          </svg>
+          <div class="map-pref-btn-wrap">
+            <a class="map-pref-btn" href="https://pref-tottori.tottori-geomap.jp">鳥取県</a>
+          </div>
+        </div>
+
+        <h3 class="gis-sites__subtitle">一覧から選択</h3>
+        <div class="list-grid">
+          <a class="list-grid__cell" href="https://city-tottori.tottori.tottori-geomap.jp">鳥取市</a>
+          <a class="list-grid__cell" href="https://city-kurayoshi.tottori.tottori-geomap.jp">倉吉市</a>
+          <a class="list-grid__cell" href="https://city-sakaiminato.tottori.tottori-geomap.jp">境港市</a>
+          <a class="list-grid__cell" href="https://town-iwami.tottori.tottori-geomap.jp">岩美町</a>
+          <a class="list-grid__cell" href="https://town-wakasa.tottori.tottori-geomap.jp">若桜町</a>
+          <a class="list-grid__cell" href="https://town-yazu.tottori.tottori-geomap.jp">八頭町</a>
+          <a class="list-grid__cell" href="https://town-misasa.tottori.tottori-geomap.jp">三朝町</a>
+          <a class="list-grid__cell" href="https://town-yurihama.tottori.tottori-geomap.jp">湯梨浜町</a>
+          <a class="list-grid__cell" href="https://town-daisen.tottori.tottori-geomap.jp">大山町</a>
+          <a class="list-grid__cell" href="https://town-nanbu.tottori.tottori-geomap.jp">南部町</a>
+          <a class="list-grid__cell" href="https://town-nichinan.tottori.tottori-geomap.jp">日南町</a>
+          <a class="list-grid__cell" href="https://town-hino.tottori.tottori-geomap.jp">日野町</a>
+          <a class="list-grid__cell" href="https://town-kofu.tottori.tottori-geomap.jp">江府町</a>
+          <a class="list-grid__cell" href="https://pref-tottori.tottori-geomap.jp">鳥取県</a>
+          <span class="list-grid__cell list-grid__cell--empty">&nbsp;</span>
+        </div>
+      </section>
+
       <section class="municipalities container" aria-labelledby="municipalities-title">
         <div class="section-head">
           <h2 id="municipalities-title">市町村GISマップ</h2>
@@ -156,8 +276,12 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>資料: 鳥取県デジタル推進室（仮）</p>
-        <p>鳥取県鳥取市幸町1丁目2200 0857-26-7615</p>
+        <p>運営：鳥取県自治体ICT共同化推進協議会<br>（事務局：鳥取県デジタル基盤整備課）</p>
+        <p class="footer-links">
+          <a href="#">利用規約</a>
+          <span class="footer-separator"> / </span>
+          <a href="#">とっとりジオマップの使い方</a>
+        </p>
         <p class="copyright">&copy; 2026 鳥取県GISポータル</p>
       </div>
     </footer>
