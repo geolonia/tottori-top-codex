@@ -2,6 +2,8 @@
   --color-primary: #1b64d8;
   --color-primary-soft: #e7f0ff;
   --color-primary-deep: #0d3e8f;
+  --color-accent: #d9534f;
+  --color-accent-deep: #c9443f;
   --color-text: #1d2a3a;
   --color-text-muted: #5a6a80;
   --color-bg: #edf4ff;
@@ -255,7 +257,7 @@ a {
 .open-data-link {
   padding: 10px 18px 10px 22px;
   border-radius: 999px;
-  background: #d9534f;
+  background: var(--color-accent);
   border: none;
   color: #ffffff;
   font-weight: 700;
@@ -263,12 +265,12 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 10px 20px rgba(180, 50, 50, 0.2);
+  box-shadow: 0 10px 20px rgba(217, 83, 79, 0.2);
   transition: background 0.2s ease;
 }
 
 .open-data-link:hover {
-  background: #c9443f;
+  background: var(--color-accent-deep);
 }
 
 .open-data-link::after {
