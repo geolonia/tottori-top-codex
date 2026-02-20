@@ -147,6 +147,7 @@ a {
 }
 
 .card {
+  position: relative;
   background: var(--color-card);
   border-radius: var(--card-radius);
   overflow: hidden;
@@ -154,12 +155,14 @@ a {
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
 }
 
 .card-media {
@@ -208,12 +211,18 @@ a {
   transition: color 0.2s ease;
 }
 
+.card-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
 .card-link::after {
   content: ">";
   font-size: 13px;
 }
 
-.card-link:hover {
+.card:hover .card-link {
   color: var(--color-primary-deep);
 }
 
