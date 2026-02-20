@@ -2,6 +2,8 @@
   --color-primary: #1b64d8;
   --color-primary-soft: #e7f0ff;
   --color-primary-deep: #0d3e8f;
+  --color-accent: #d9534f;
+  --color-accent-deep: #c9443f;
   --color-text: #1d2a3a;
   --color-text-muted: #5a6a80;
   --color-bg: #edf4ff;
@@ -147,6 +149,7 @@ a {
 }
 
 .card {
+  position: relative;
   background: var(--color-card);
   border-radius: var(--card-radius);
   overflow: hidden;
@@ -154,12 +157,14 @@ a {
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
 }
 
 .card-media {
@@ -198,33 +203,29 @@ a {
   margin-top: auto;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 10px 6px 12px;
-  border-radius: 999px;
-  background: #ffffff;
-  color: var(--color-primary-deep);
+  gap: 4px;
+  padding: 0;
+  background: none;
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 13px;
-  border: 1px solid #d7e4fa;
-  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.card-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .card-link::after {
-  content: "→";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  background: #e9f1ff;
-  font-size: 14px;
+  content: ">";
+  font-size: 13px;
 }
 
-.card-link:hover {
-  background: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
+.card:hover .card-link {
+  color: var(--color-primary-deep);
 }
 
 .open-data {
@@ -256,7 +257,7 @@ a {
 .open-data-link {
   padding: 10px 18px 10px 22px;
   border-radius: 999px;
-  background: var(--color-primary);
+  background: var(--color-accent);
   border: none;
   color: #ffffff;
   font-weight: 700;
@@ -264,7 +265,12 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 10px 20px rgba(13, 48, 102, 0.2);
+  box-shadow: 0 10px 20px rgba(217, 83, 79, 0.2);
+  transition: background 0.2s ease;
+}
+
+.open-data-link:hover {
+  background: var(--color-accent-deep);
 }
 
 .open-data-link::after {
@@ -291,6 +297,12 @@ a {
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
   text-align: center;
+}
+
+.footer-inner .copyright {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 576px) {
